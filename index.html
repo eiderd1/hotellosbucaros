@@ -1,0 +1,355 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacienda Hotel Los Bucaros</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+</head>
+<body>
+  
+  <header data-aos="fade-down">
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Hacienda Hotel Los Bucaros" class="logo-img">
+      <span>Hda Hotel Los Bucaros</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="reserva.html">Reservas</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="dia-sol.html">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- =============================
+      Hero con Video + Fallback
+============================= -->
+<section class="hero" data-aos="zoom-in">
+  <!-- Video de fondo -->
+  <video autoplay muted loop playsinline class="hero-video" poster="img/galeria22.mp4">
+    <source src="img/galeria22.mp4" type="video/mp4">
+    <!-- Fallback: si no carga el video, muestra una imagen -->
+    <img src="img/galeria19.jpg" alt="Fondo Hacienda Hotel Los Bucaros">
+  </video>
+
+  <!-- Contenido encima del video/imagen -->
+  <div class="hero-content">
+    <h1>Bienvenido a la Hacienda Hotel Los Bucaros</h1>
+    <p>Un lugar de descanso, naturaleza y experiencias inolvidables.</p>
+    <a href="reserva.html" class="btn">Reservar Ahora</a>
+    <a href="#habitaciones" class="btn secundario">Ver más</a>
+  </div>
+</section>
+
+
+  <!-- =============================
+  📸 Galería con Swiper + Fancybox
+  ============================= -->
+  <section id="galeria" class="galeria" data-aos="fade-up">
+    <h2>📸 Galería</h2>
+    
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Imagenes -->
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria1.jpg" data-caption="Galería 1">
+            <img src="img/galeria1.jpg" alt="Galería 1">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria2.jpg" data-caption="Galería 2">
+            <img src="img/galeria2.jpg" alt="Galería 2">
+          </a>
+        </div>
+
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria3.jpg" data-caption="Galería 3">
+            <img src="img/galeria3.jpg" alt="Galería 3">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria4.jpg" data-caption="Galería 3">
+            <img src="img/galeria4.jpg" alt="Galería 4">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria5.jpg" data-caption="Galería 3">
+            <img src="img/galeria5.jpg" alt="Galería 5">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria6.jpg" data-caption="Galería 3">
+            <img src="img/galeria6.jpg" alt="Galería 6">
+          </a>
+        </div><div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria7.jpg" data-caption="Galería 3">
+            <img src="img/galeria7.jpg" alt="Galería 7">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria8.jpg" data-caption="Galería 3">
+            <img src="img/galeria8.jpg" alt="Galería 8">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria9.jpg" data-caption="Galería 3">
+            <img src="img/galeria9.jpg" alt="Galería 9">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria10.jpg" data-caption="Galería 3">
+            <img src="img/galeria10.jpg" alt="Galería 10">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria11.jpg" data-caption="Galería 3">
+            <img src="img/galeria11.jpg" alt="Galería 11">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria12.jpg" data-caption="Galería 3">
+            <img src="img/galeria12.jpg" alt="Galería 12">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria13.jpg" data-caption="Galería 3">
+            <img src="img/galeria13.jpg" alt="Galería 13">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria14.jpg" data-caption="Galería 3">
+            <img src="img/galeria14.jpg" alt="Galería 14">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria15.jpg" data-caption="Galería 3">
+            <img src="img/galeria15.jpg" alt="Galería 15">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria16.jpg" data-caption="Galería 3">
+            <img src="img/galeria16.jpg" alt="Galería 16">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria17.jpg" data-caption="Galería 3">
+            <img src="img/galeria17.jpg" alt="Galería 17">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria18.jpg" data-caption="Galería 3">
+            <img src="img/galeria18.jpg" alt="Galería 18">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria19.jpg" data-caption="Galería 3">
+            <img src="img/galeria19.jpg" alt="Galería 19">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria20.jpg" data-caption="Galería 3">
+            <img src="img/galeria20.jpg" alt="Galería 20">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria21.jpg" data-caption="Galería 3">
+            <img src="img/galeria21.jpg" alt="Galería 21">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria26.jpg" data-caption="Galería 3">
+            <img src="img/galeria26.jpg" alt="Galería 26">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria29.jpg" data-caption="Galería 3">
+            <img src="img/galeria29.jpg" alt="Galería 29">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria30.jpg" data-caption="Galería 3">
+            <img src="img/galeria30.jpg" alt="Galería 30">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria31.jpg" data-caption="Galería 3">
+            <img src="img/galeria31.jpg" alt="Galería 31">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria32.jpg" data-caption="Galería 3">
+            <img src="img/galeria32.jpg" alt="Galería 32">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria33.jpg" data-caption="Galería 3">
+            <img src="img/galeria33.jpg" alt="Galería 33">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria34.jpg" data-caption="Galería 3">
+            <img src="img/galeria34.jpg" alt="Galería 34">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria35.jpg" data-caption="Galería 3">
+            <img src="img/galeria35.jpg" alt="Galería 35">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria36.jpg" data-caption="Galería 3">
+            <img src="img/galeria36.jpg" alt="Galería 36">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria37.jpg" data-caption="Galería 3">
+            <img src="img/galeria37.jpg" alt="Galería 37">
+          </a>
+        </div>
+
+        <!-- Videos -->
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria22.mp4" data-caption="Video 1">
+            <video muted autoplay loop>
+              <source src="img/galeria22.mp4" type="video/mp4">
+            </video>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria23.mp4" data-caption="Video 2">
+            <video muted autoplay loop>
+              <source src="img/galeria23.mp4" type="video/mp4">
+            </video>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria24.mp4" data-caption="Video 2">
+            <video muted autoplay loop>
+              <source src="img/galeria24.mp4" type="video/mp4">
+            </video>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria25.mp4" data-caption="Video 2">
+            <video muted autoplay loop>
+              <source src="img/galeria25.mp4" type="video/mp4">
+            </video>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria27.mp4" data-caption="Video 2">
+            <video muted autoplay loop>
+              <source src="img/galeria27.mp4" type="video/mp4">
+            </video>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a data-fancybox="galeria" href="img/galeria28.mp4" data-caption="Video 2">
+            <video muted autoplay loop>
+              <source src="img/galeria28.mp4" type="video/mp4">
+            </video>
+          </a>
+        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+     <!-- Habitaciones -->
+<section id="habitaciones" class="content">
+  <h2 data-aos="fade-up">Nuestras Habitaciones</h2>
+  <p data-aos="fade-up" data-aos-delay="200">Comodidad, elegancia y naturaleza para tu descanso.</p>
+  <div class="cards">
+    <div class="card" data-aos="fade-right">
+      <h3>Suite Familiar</h3>
+      <p>Ideal para grupos hasta 10 personas, incluye alimentación y acceso total a instalaciones.</p>
+    </div>
+    <div class="card" data-aos="fade-right">
+      <h3>Habitación Sencilla</h3>
+      <p>Perfecta para parejas, con tarifa especial en semana y fin de semana, decoración adicional.</p>
+    </div>
+    <div class="card" data-aos="fade-left" data-aos-delay="200">
+      <h3>Habitación Estándar</h3>
+      <p>Perfecta para parejas, con tarifa especial en semana y fin de semana.</p>
+    </div>
+    <div class="card" data-aos="fade-right" data-aos-delay="300">
+      <h3>Cabaña Familiar</h3>
+      <p>Amplia y rodeada de naturaleza, ideal para grupos de 6 a 11 personas.</p>
+    </div>
+    <div class="card" data-aos="fade-left" data-aos-delay="400">
+      <h3>Suite con Jacuzzi</h3>
+      <p>Con jacuzzi privado, aire acondicionado y decoración opcional.</p>
+    </div>
+  </div>
+  <a href="habitaciones.html" class="btn" data-aos="fade-up" style="margin-top:30px;">Ver más</a>
+</section>
+
+    <!-- Servicios -->
+<section id="servicios" class="content alt">
+  <h2 data-aos="fade-up">Día de Sol</h2>
+  <ul data-aos="fade-right">
+    <li>Acceso a piscina, lago de pesca y charco natural</li>
+    <li>Baño turco y canchas deportivas</li>
+    <li>Zonas de hamacas, Variedad de kioscos y juegos de mesas</li>
+  </ul>
+  <a href="dia-sol.html" class="btn" data-aos="fade-up">Ver más</a>
+
+  <h2 data-aos="fade-up" style="margin-top:40px;">Alojamientos</h2>
+  <ul data-aos="fade-left">
+    <li>Cena, desayuno y almuerzo incluidos</li>
+    <li>Acceso a piscina y turco</li>
+    <li>Visita guiada a charcos naturales</li>
+    <li>Lago de pesca y espacios naturales</li>
+    <li>Uso de canchas (fútbol, básquetbol) mesa de billar pool y ping pong</li>
+  </ul>
+  <h2 data-aos="fade-up" style="margin-top:40px;">Eventos Familiares y/o Empresariales Convenciones etc</h2>
+  <ul data-aos="fade-left">
+    <li>Cena, desayuno y almuerzo incluidos</li>
+    <li>Acceso a piscina y turco</li>
+    <li>Visita guiada a charcos naturales</li>
+    <li>Lago de pesca y espacios naturales</li>
+    <li>Uso de canchas (fútbol, básquetbol) mesa de billar pool y ping pong</li>
+  </ul>
+</section>
+
+  <!-- Contacto del hotel -->
+  <section id="contacto" class="content">
+    <h2 data-aos="fade-up">Contacto</h2>
+    <p>Email: haciendahotellosbucaros@gmail.com, reservas.haciendabucaros@gmail.com</p>
+    <p data-aos="fade-up">Vereda La Playita, Barbosa Antioquia, Colombia</p>
+    <p data-aos="zoom-in">
+      <a href="https://maps.app.goo.gl/uHCheAaooHPA3a5y8" target="_blank">📍 Ver en Google Maps</a>
+    </p>
+    <div class="social-links" data-aos="fade-up">
+      <a href="https://www.facebook.com/haciendahotellosbucaros" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/haciendahotellosbucaros/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/+573137968741" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://wa.me/+573137967471" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hacienda Hotel Los Bucaros. Todos los derechos reservados.</p>
+    <p>Creado por Eider Tech Soluciones</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <!-- JS propio -->
+  <script src="scripts.js"></script>
+</body>
+</html>

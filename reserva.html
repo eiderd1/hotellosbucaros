@@ -1,0 +1,329 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas - Hotel Los Bucaros</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header data-aos="fade-down">
+    <div class="logo">
+      <img src="img/logo.jpg" alt="Hacienda Hotel Los Bucaros" class="logo-img">
+      <span>Hda Hotel Los Bucaros</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="dia-sol.html">Servicios</a></li>
+        <li><a href="reserva.html" class="active">Reserva</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="start small" data-aos="zoom-in">
+      <h1>Haz tu Solicitud de Reserva</h1>
+      <p>Elige tu plan y vive la experiencia Bucaros</p>
+    </section>
+
+    <section class="content" data-aos="fade-up">
+      <form id="reserva-form" class="reserva-form">
+        <h2>🧑‍💼 Datos del Cliente</h2>
+
+        <label>Nombre Completo:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Número de Identificación:</label>
+        <input type="text" name="identificacion" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" required>
+
+        <h2>📌 Detalles de la Reserva</h2>
+
+        <label>Tipo de Reserva:</label>
+        <select name="tipoReserva" id="tipo_reserva" required>
+          <option value="">Selecciona...</option>
+          <option value="dia-sol">Día de Sol</option>
+          <option value="habitacion">Alojamiento</option>
+          <option value="evento">Evento</option>
+        </select>
+
+        <!-- Día de Sol -->
+        <div id="dia-sol-options" style="display:none;">
+          <h3>Adultos</h3>
+          <select name="plan_adulto" id="plan_adulto">
+            <option value="90000">Almuerzo + refrigerio ($90.000)</option>
+            <option value="95000">Desayuno + almuerzo ($95.000)</option>
+            <option value="102000">Desayuno + almuerzo + refrigerio ($102.000)</option>
+          </select>
+          <input type="number" name="adultos" id="adultos_dia" value="1" min="0">
+
+          <h3>Niños (0–4 años)</h3>
+          <select name="plan_nino_04" id="plan_nino_04">
+            <option value="20000">No incluye alimentación ($20.000)</option>
+          </select>
+          <input type="number" name="ninos_04" id="ninos_04" value="0" min="0">
+
+          <h3>Niños (5–10 años)</h3>
+          <select name="plan_nino_510" id="plan_nino_510">
+            <option value="80000">Almuerzo + refrigerio ($80.000)</option>
+            <option value="85000">Desayuno + almuerzo ($85.000)</option>
+            <option value="92000">Desayuno + almuerzo + refrigerio ($92.000)</option>
+          </select>
+          <input type="number" name="ninos_510" id="ninos_510" value="0" min="0">
+
+          <h3>Mascotas</h3>
+          <input type="number" name="mascotas" id="mascotas" value="0" min="0">
+
+          <h3>💆 Servicios de Spa (Opcional)</h3>
+          <select name="spa_plan" id="spa_plan">
+            <option value="0">Ninguno</option>
+            <option value="60000">Masaje de espalda ($60.000)</option>
+            <option value="90000">Masaje de cuerpo entero ($90.000)</option>
+            <option value="100000">Masaje con chocolaterapia o frutos rojos ($100.000)</option>
+          </select>
+          <input type="number" name="spa_personas" id="spa_personas" value="0" min="0" placeholder="Personas">
+
+          <h3>🧺 Zona Picnic (Opcional)</h3>
+          <select name="picnic_plan" id="picnic_plan">
+            <option value="0">Ninguno</option>
+            <option value="180000">Para 2 personas → $180.000</option>
+            <option value="190000">Para 3 a 5 personas → $190.000</option>
+            <option value="210000">Para 6 a 10 personas → $210.000</option>
+            <option value="270000">Para 11 a 20 personas → $270.000</option>
+            <option value="320000">Para 20 a 30 personas → $320.000</option>
+          </select>
+        </div>
+
+        <!-- Habitaciones -->
+        <div id="habitaciones-options" style="display:none;">
+          <label>Habitación:</label>
+          <select name="habitaciones" id="habitacion_tipo">
+            <option value="suite-familiar">Suite Familiar (por persona)</option>
+            <option value="cabaña-familiar">Cabaña Familiar (por persona, mínimo 6)</option>
+            <option value="habitacion-sencilla">Habitación Sencilla (por pareja)</option>
+            <option value="habitacion-estandar">Habitación Estándar (por pareja)</option>
+            <option value="suite-jacuzzi">Suite con Jacuzzi (por pareja)</option>
+          </select>
+
+          <div class="grid">
+            <div id="personas_field">
+              <label>Personas:</label>
+              <input type="number" name="adultos" id="adultos_hab" value="0" min="0">
+            </div>
+            <div id="parejas_field">
+              <label>Parejas:</label>
+              <input type="number" name="parejas" id="parejas_hab" value="0" min="0">
+            </div>
+          </div>
+        </div>
+
+        <!-- Evento -->
+        <div id="evento-options" style="display:none;">
+          <label>Número de asistentes:</label>
+          <input type="number" name="adultos" id="adultos_evento" value="0" min="0">
+        </div>
+
+        <label>Fecha de Ingreso:</label>
+        <input type="date" name="fechaIngreso" required>
+
+        <label>Fecha de Salida:</label>
+        <input type="date" name="fechaSalida">
+
+        <label>Código de Promoción:</label>
+        <input type="text" name="codigoPromocion" id="codigo_promocion" placeholder="Ej: VERANO2025" oninput="this.value=this.value.toUpperCase()">
+
+        <label>Precio Calculado:</label>
+        <p id="precio-total"><strong>$0</strong></p>
+        <p id="mensaje-error" style="color:red; display:none; font-weight:bold;"></p>
+
+        <!-- Campos ocultos -->
+        <input type="hidden" name="precio" id="precio_input">
+        <input type="hidden" name="precioFinal" id="precio_final_input">
+
+        <button type="submit" class="btn">Enviar Reserva</button>
+      </form>
+
+      <div id="respuesta" class="respuesta"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hacienda Hotel Los Bucaros. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+  function actualizarPrecio() {
+    let total = 0;
+    const tipo = document.getElementById("tipo_reserva").value;
+
+    // Detectar si es fin de semana
+    const fechaIngreso = document.querySelector('input[name="fechaIngreso"]').value;
+    let esFinSemana = false;
+    if (fechaIngreso) {
+      const fecha = new Date(fechaIngreso + "T00:00:00");
+      const dia = fecha.getDay(); // 0=Dom, 5=Vie, 6=Sáb
+      if (dia === 0 || dia === 5 || dia === 6) {
+        esFinSemana = true;
+      }
+    }
+
+    // Ocultar mensaje de error
+    const mensajeError = document.getElementById("mensaje-error");
+    mensajeError.style.display = "none";
+    mensajeError.innerText = "";
+
+    if (tipo === "dia-sol") {
+      const planAdulto = parseInt(document.getElementById("plan_adulto").value) || 0;
+      const adultos = parseInt(document.getElementById("adultos_dia").value) || 0;
+
+      const planNino04 = parseInt(document.getElementById("plan_nino_04").value) || 0;
+      const ninos04 = parseInt(document.getElementById("ninos_04").value) || 0;
+
+      const planNino510 = parseInt(document.getElementById("plan_nino_510").value) || 0;
+      const ninos510 = parseInt(document.getElementById("ninos_510").value) || 0;
+
+      const mascotas = parseInt(document.getElementById("mascotas").value) || 0;
+
+      total += (planAdulto * adultos) 
+             + (planNino04 * ninos04) 
+             + (planNino510 * ninos510) 
+             + (mascotas * 10000);
+
+      let spaPlan = parseInt(document.getElementById("spa_plan").value) || 0;
+      let spaPersonas = parseInt(document.getElementById("spa_personas").value) || 0;
+      if (spaPlan > 0 && spaPersonas > 0) {
+        total += spaPlan * spaPersonas;
+      }
+
+      let picnicPlan = parseInt(document.getElementById("picnic_plan").value) || 0;
+      if (picnicPlan > 0) {
+        total += picnicPlan;
+      }
+    } 
+    else if (tipo === "habitacion") {
+      const habitacion = document.getElementById("habitacion_tipo").value;
+      const adultos = parseInt(document.getElementById("adultos_hab").value) || 0;
+      const parejas = parseInt(document.getElementById("parejas_hab").value) || 0;
+
+      switch(habitacion) {
+        case "suite-familiar": 
+          total += adultos * 235000; 
+          break;
+
+        case "habitacion-sencilla": 
+          total += parejas * (esFinSemana ? 450000 : 430000);
+          break;
+
+        case "habitacion-estandar": 
+          total += parejas * (esFinSemana ? 470000 : 450000);
+          break;
+
+        case "cabaña-familiar": 
+          if (adultos < 6) {
+            total = 0;
+            mensajeError.style.display = "block";
+            mensajeError.innerText = "⚠️ La Cabaña Familiar requiere mínimo 6 adultos.";
+          } else {
+            total += adultos * (esFinSemana ? 260000 : 230000);
+          }
+          break;
+
+        case "suite-jacuzzi": 
+          total += parejas * (esFinSemana ? 550000 : 530000);
+          break;
+      }
+    } 
+    else if (tipo === "evento") {
+      const asistentes = parseInt(document.getElementById("adultos_evento").value) || 0;
+      total += asistentes * 50000;
+    }
+
+    // Promoción
+    let descuento = 0;
+    const promo = document.getElementById("codigo_promocion").value.trim();
+    if (promo === "VERANO2025") descuento = 10;
+    if (promo === "FIESTAS2025") descuento = 20;
+
+    let precioConDescuento = total;
+    if (descuento > 0) {
+      precioConDescuento = total - (total * (descuento / 100));
+    }
+
+    document.getElementById("precio-total").innerHTML =
+      `<strong>$${precioConDescuento.toLocaleString("es-CO")}</strong>`;
+
+    document.getElementById("precio_input").value = total;
+    document.getElementById("precio_final_input").value = precioConDescuento;
+  }
+
+  // Listeners
+  document.querySelectorAll("input, select").forEach(el => {
+    el.addEventListener("input", actualizarPrecio);
+    el.addEventListener("change", actualizarPrecio);
+  });
+
+  // Mostrar/ocultar opciones según tipo
+  const tipoReservaSelect = document.getElementById("tipo_reserva");
+  const diaSolDiv = document.getElementById("dia-sol-options");
+  const habDiv = document.getElementById("habitaciones-options");
+  const eventoDiv = document.getElementById("evento-options");
+
+  tipoReservaSelect.addEventListener("change", () => {
+    diaSolDiv.style.display = "none";
+    habDiv.style.display = "none";
+    eventoDiv.style.display = "none";
+
+    if (tipoReservaSelect.value === "dia-sol") diaSolDiv.style.display = "block";
+    if (tipoReservaSelect.value === "habitacion") habDiv.style.display = "block";
+    if (tipoReservaSelect.value === "evento") eventoDiv.style.display = "block";
+
+    actualizarPrecio();
+  });
+
+  // Envío de formulario
+  document.getElementById("reserva-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch("/api/reserva", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      const respuesta = document.getElementById("respuesta");
+
+      if (result.success) {
+        respuesta.innerHTML = `<p style="color:green">✅ Reserva enviada con éxito</p>`;
+        this.reset();
+        document.getElementById("precio-total").innerHTML = "<strong>$0</strong>";
+        document.getElementById("mensaje-error").style.display = "none";
+      } else {
+        respuesta.innerHTML = `<p style="color:red">❌ Error: ${result.error}</p>`;
+      }
+    } catch (err) {
+      document.getElementById("respuesta").innerHTML = `<p style="color:red">⚠️ Error en el servidor</p>`;
+    }
+  });
+</script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
