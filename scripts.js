@@ -163,4 +163,26 @@ function reemplazarPorImagen(videoElement) {
   // Reemplazar el video por la imagen
   videoElement.parentNode.replaceChild(img, videoElement);
 }
+// 🍔 Menú Hamburguesa
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
 
+toggle.addEventListener("click", () => {
+  menu.classList.toggle("show");
+
+  // Cambia ícono ☰ ✖
+  if (menu.classList.contains("show")) {
+    toggle.textContent = "✖";
+  } else {
+    toggle.textContent = "☰";
+  }
+});
+
+// 🔹 Cerrar menú al hacer clic en un enlace
+const links = menu.querySelectorAll("a");
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("show");
+    toggle.textContent = "☰";
+  });
+});
