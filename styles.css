@@ -62,6 +62,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -304,13 +305,6 @@ footer {
 /* =============================
    📱 Responsivo
 ============================= */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 1001;
-}
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -329,36 +323,15 @@ footer {
 
 /* Móviles */
 @media (max-width: 768px) {
-  /* Menú hamburguesa */
-  .menu-toggle {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #ffb347;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-  }
-
-  nav.show {
-    display: block;
-  }
-
   nav ul {
     flex-direction: column;
     gap: 12px;
+    text-align: center;
   }
 
   nav a {
     display: block;
     padding: 10px;
-    text-align: center;
   }
 
   /* Hero */
