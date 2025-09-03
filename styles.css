@@ -302,8 +302,17 @@ footer {
 }
 
 /* =============================
-   📱 Ajustes Responsivos
+   📱 Responsivo
 ============================= */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Tablets */
 @media (max-width: 1024px) {
   header {
     flex-direction: column;
@@ -318,36 +327,49 @@ footer {
   }
 }
 
+/* Móviles */
 @media (max-width: 768px) {
-  /* Header */
-  header {
-    flex-direction: column;
-    padding: 10px;
+  /* Menú hamburguesa */
+  .menu-toggle {
+    display: block;
   }
 
-  .logo-img {
-    width: 40px;
-    height: 40px;
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #ffb347;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
 
-  header .logo span {
-    font-size: 1rem;
+  nav.show {
+    display: block;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
   }
 
   nav a {
-    font-size: 0.95rem;
-    padding: 6px 12px;
+    display: block;
+    padding: 10px;
+    text-align: center;
   }
 
   /* Hero */
   .hero {
-    height: auto; /* 👈 ya no ocupa toda la pantalla */
-    padding: 60px 15px;
+    height: auto;
+    min-height: 60vh;
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+    padding: 30px 15px;
   }
 
   .hero-content h1 {
@@ -380,6 +402,7 @@ footer {
   }
 }
 
+/* Celulares pequeños */
 @media (max-width: 480px) {
   .hero-content h1 {
     font-size: 1.4rem;
@@ -397,48 +420,27 @@ footer {
   .swiper {
     height: 220px;
   }
-}
-/* =============================
-   📱 Menú Hamburguesa Responsive
-============================= */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-  z-index: 1001;
-}
 
-/* Estilos móviles */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #ffb347;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    padding: 15px;
-    z-index: 1000;
-  }
-
-  nav.show {
-    display: block;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav a {
-    display: block;
+  footer {
+    font-size: 0.9rem;
     padding: 10px;
-    font-size: 1.1rem;
   }
+}
 
-  .menu-toggle {
-    display: block;
-  }
+/* =============================
+   📝 Formularios (Reserva)
+============================= */
+.reserva-form {
+  max-width: 800px;
+  margin: auto;
+}
+
+.reserva-form input,
+.reserva-form select,
+.reserva-form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
 }
