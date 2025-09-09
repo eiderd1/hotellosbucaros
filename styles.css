@@ -508,3 +508,41 @@ footer {
 
 /* Mensajes de respuesta del formulario */
 .respuesta { margin-top: 20px; font-weight: 600; }
+/* =============================
+   Botones de Contacto Fijos
+============================= */
+.contact-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.contact-btn {
+  width: 55px;
+  height: 55px;
+  background: #25d366; /* WhatsApp por defecto */
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  background: #128c7e;
+}
+
+/* Colores personalizados */
+.contact-btn.phone { background: #007bff; }   /* Azul teléfono */
+.contact-btn.phone:hover { background: #0056b3; }
+
+.contact-btn.email { background: #ff9800; }   /* Naranja correo */
+.contact-btn.email:hover { background: #e68900; }
