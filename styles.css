@@ -546,3 +546,54 @@ footer {
 
 .contact-btn.email { background: #ff9800; }   /* Naranja correo */
 .contact-btn.email:hover { background: #e68900; }
+/* =============================
+   Tooltip en Contactos Fijos
+============================= */
+.contact-btn {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: #25d366;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  transform: scale(1.1);
+  background: #128c7e;
+}
+
+/* Tooltip */
+.contact-btn .tooltip {
+  position: absolute;
+  right: 65px; /* Ubicado a la izquierda del icono */
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.contact-btn:hover .tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Colores personalizados */
+.contact-btn.phone { background: #007bff; }
+.contact-btn.phone:hover { background: #0056b3; }
+
+.contact-btn.email { background: #ff9800; }
+.contact-btn.email:hover { background: #e68900; }
